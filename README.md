@@ -14,8 +14,8 @@ Interactive onboarding for new [Claude Code](https://docs.anthropic.com/en/docs/
 ## Install
 
 ```bash
-git clone https://github.com/your-org/claude-onboarding.git
-cd claude-onboarding
+git clone https://github.com/ChintanTurakhia/onboarding-skills.git
+cd onboarding-skills
 ./install.sh
 ```
 
