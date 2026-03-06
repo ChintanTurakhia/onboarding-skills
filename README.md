@@ -41,6 +41,42 @@ You can pause and resume at any time. Run `/onboard` to see where you left off.
 
 ---
 
+## Reference
+
+### Available commands
+
+```
+/onboard          # See progress, get guided to the next step
+/onboard-env      # Phase 1: Set up your dev environment
+/onboard-mcps     # Phase 2: Configure MCP integrations
+/onboard-task     # Phase 3: Complete your first task and open a PR
+/onboard reset    # Clear progress and start over
+/onboard status   # Just show progress without routing
+```
+
+### Supported MCPs
+
+The MCP catalog (`skills/onboard-mcps/mcp-catalog.md`) includes:
+
+| Category | Tools |
+|----------|-------|
+| Project Management | Linear, Jira, Asana, GitHub Issues |
+| Knowledge Base | Confluence, Notion |
+| CRM | Salesforce, HubSpot |
+| Design | Excalidraw |
+
+To add a new MCP, edit `skills/onboard-mcps/mcp-catalog.md` with the install command, required credentials, and verification steps.
+
+### How it works
+
+- Skills are installed to `~/.claude/skills/` and available as slash commands in any Claude Code session
+- Progress is tracked in `~/.onboarding-state.md` (created on first run)
+- Every phase is **idempotent** -- safe to re-run without breaking anything
+- The flow is **role-aware** -- developers and PMs get different tool suggestions and task types
+- Credentials are passed via `claude mcp add -e` and never stored in plain text
+
+---
+
 ## For team leads: customizing this for your team
 
 Fork this repo and edit the skills to fit your stack:
