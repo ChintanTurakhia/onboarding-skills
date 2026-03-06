@@ -53,16 +53,17 @@ Conduct the interview category by category. For each category, present the optio
 - Notion
 - Skip
 
-**Category 3: CRM** (only ask if role is PM, Sales, or Other)
+**Category 3: CRM**
 
 "Do you use a CRM?"
 - Salesforce
 - HubSpot
 - Skip
 
-**Category 4: Design** (only ask if role is Designer or PM)
+**Category 4: Design**
 
 "Do you use a design or diagramming tool?"
+- Figma
 - Excalidraw
 - Skip
 

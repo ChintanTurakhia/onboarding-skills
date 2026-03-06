@@ -64,7 +64,7 @@ The MCP catalog (`skills/onboard-mcps/mcp-catalog.md`) includes:
 | Project Management | Linear, Jira, Asana, GitHub Issues |
 | Knowledge Base | Confluence, Notion |
 | CRM | Salesforce, HubSpot |
-| Design | Excalidraw |
+| Design | Figma, Excalidraw |
 
 To add a new MCP, run `/add-mcp` -- it will ask you about the tool and add a properly formatted entry to the catalog.
 

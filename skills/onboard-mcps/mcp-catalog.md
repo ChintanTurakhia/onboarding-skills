@@ -166,6 +166,23 @@ Reference catalog of MCP servers available for onboarding. Each entry includes t
 
 ## Design & Diagramming
 
+### Figma
+
+- **Category:** Design / Diagramming
+- **Install:**
+  ```bash
+  claude mcp add --scope user figma -- npx -y figma-developer-mcp --stdio
+  ```
+- **Credentials:**
+  - `FIGMA_API_KEY` -- Personal access token
+  - Get it from: [Figma Settings > Personal Access Tokens](https://www.figma.com/developers/api#access-tokens)
+- **Environment setup:**
+  ```bash
+  claude mcp add --scope user -e FIGMA_API_KEY=<key> figma -- npx -y figma-developer-mcp --stdio
+  ```
+- **Verification:** After restart, ask Claude: "List my recent Figma files."
+- **What it enables:** Read Figma files, inspect design tokens, extract styles and components.
+
 ### Excalidraw
 
 - **Category:** Design / Diagramming
