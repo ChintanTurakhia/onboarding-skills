@@ -52,6 +52,7 @@ You can pause and resume at any time. Run `/onboard` to see where you left off.
 /onboard-task     # Phase 3: Complete your first task and open a PR
 /onboard reset    # Clear progress and start over
 /onboard status   # Just show progress without routing
+/add-mcp          # Add a new MCP server to the catalog
 ```
 
 ### Supported MCPs
@@ -65,7 +66,7 @@ The MCP catalog (`skills/onboard-mcps/mcp-catalog.md`) includes:
 | CRM | Salesforce, HubSpot |
 | Design | Excalidraw |
 
-To add a new MCP, edit `skills/onboard-mcps/mcp-catalog.md` with the install command, required credentials, and verification steps.
+To add a new MCP, run `/add-mcp` -- it will ask you about the tool and add a properly formatted entry to the catalog.
 
 ### How it works
 

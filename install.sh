@@ -12,13 +12,14 @@ set -euo pipefail
 SKILLS_DIR="$HOME/.claude/skills"
 REPO_BASE="https://raw.githubusercontent.com/ChintanTurakhia/onboarding-skills/main"
 
-SKILLS=(onboard onboard-env onboard-mcps onboard-task)
+SKILLS=(onboard onboard-env onboard-mcps onboard-task add-mcp)
 FILES=(
   "skills/onboard/SKILL.md"
   "skills/onboard-env/SKILL.md"
   "skills/onboard-mcps/SKILL.md"
   "skills/onboard-mcps/mcp-catalog.md"
   "skills/onboard-task/SKILL.md"
+  "skills/add-mcp/SKILL.md"
 )
 
 echo "Installing Claude Code onboarding skills..."
