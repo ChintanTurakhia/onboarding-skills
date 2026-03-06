@@ -11,7 +11,25 @@ Interactive onboarding for new [Claude Code](https://docs.anthropic.com/en/docs/
 | 2 | `/onboard-mcps` | Interviews you about your tools (Linear, Jira, Confluence, etc.) and installs MCP servers |
 | 3 | `/onboard-task` | Clones a repo, helps you pick a ticket, plan the work, and open a draft PR |
 
-## Install
+## Prerequisites
+
+### 1. Install Claude Code
+
+```bash
+npm install -g @anthropic-ai/claude-code
+```
+
+Or if you prefer not to install globally:
+
+```bash
+npx @anthropic-ai/claude-code
+```
+
+Then run `claude` to launch it. On first run, you'll be prompted to authenticate with your Anthropic account (or API key).
+
+For full install docs, see: [Claude Code Getting Started](https://docs.anthropic.com/en/docs/claude-code/getting-started)
+
+### 2. Install the onboarding skills
 
 ```bash
 git clone https://github.com/ChintanTurakhia/onboarding-skills.git
@@ -19,7 +37,7 @@ cd onboarding-skills
 ./install.sh
 ```
 
-This copies the skills into `~/.claude/skills/`. Then start a new Claude Code session.
+This copies the skills into `~/.claude/skills/`. Then start a new Claude Code session and run `/onboard`.
 
 ## Usage
 
