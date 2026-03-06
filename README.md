@@ -19,12 +19,13 @@ Then type `claude` and hit enter. It will walk you through signing in.
 Once Claude Code is running, copy the entire block below and paste it in:
 
 ```
-Clone https://github.com/ChintanTurakhia/onboarding-skills.git and run
-./install.sh to set up the onboarding skills. Then start the onboarding
-by running the steps from /onboard.
+Run this command to install the onboarding skills:
+curl -fsSL https://raw.githubusercontent.com/ChintanTurakhia/onboarding-skills/main/install.sh | bash
+
+Then start the onboarding by running the steps from /onboard.
 ```
 
-Claude will clone this repo, install the onboarding skills, and start guiding you through setup. Just follow along and answer its questions.
+Claude will download and install the onboarding skills, then start guiding you through setup. Just follow along and answer its questions.
 
 ## What happens next
 
@@ -48,7 +49,7 @@ Fork this repo and edit the skills to fit your stack:
 - `skills/onboard-mcps/mcp-catalog.md` -- Add your company's MCP servers and credentials
 - `skills/onboard-task/SKILL.md` -- Set a default repo or ticket source for new hires
 
-Then update the clone URL in the prompt above to point to your fork.
+Then update the GitHub URL in the install script and the prompt above to point to your fork.
 
 ## License
 
