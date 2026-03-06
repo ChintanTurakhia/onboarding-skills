@@ -1,91 +1,54 @@
 # Claude Code Onboarding
 
-Interactive onboarding for new [Claude Code](https://docs.anthropic.com/en/docs/claude-code) users. Guides you from zero to your first pull request in 3 phases.
+Get set up with Claude Code and open your first pull request -- no experience needed.
 
-## What It Does
+## Step 1: Install Claude Code
 
-| Phase | Skill | Description |
-|-------|-------|-------------|
-| - | `/onboard` | Entry point. Shows progress, tells you what to do next |
-| 1 | `/onboard-env` | Installs dev tools (brew, git, gh, node), configures git, sets up GitHub auth |
-| 2 | `/onboard-mcps` | Interviews you about your tools (Linear, Jira, Confluence, etc.) and installs MCP servers |
-| 3 | `/onboard-task` | Clones a repo, helps you pick a ticket, plan the work, and open a draft PR |
+Open your terminal and run:
 
-## Prerequisites
-
-### 1. Install Claude Code
-
-```bash
+```
 npm install -g @anthropic-ai/claude-code
 ```
 
-Or if you prefer not to install globally:
+Then type `claude` and hit enter. It will walk you through signing in.
 
-```bash
-npx @anthropic-ai/claude-code
-```
+> Need more help installing? See the [official guide](https://docs.anthropic.com/en/docs/claude-code/getting-started).
 
-Then run `claude` to launch it. On first run, you'll be prompted to authenticate with your Anthropic account (or API key).
+## Step 2: Copy and paste this prompt
 
-For full install docs, see: [Claude Code Getting Started](https://docs.anthropic.com/en/docs/claude-code/getting-started)
-
-### 2. Install the onboarding skills
-
-```bash
-git clone https://github.com/ChintanTurakhia/onboarding-skills.git
-cd onboarding-skills
-./install.sh
-```
-
-This copies the skills into `~/.claude/skills/`. Then start a new Claude Code session and run `/onboard`.
-
-## Usage
+Once Claude Code is running, copy the entire block below and paste it in:
 
 ```
-/onboard          # See progress, get guided to the next step
-/onboard-env      # Phase 1: Set up your dev environment
-/onboard-mcps     # Phase 2: Configure MCP integrations
-/onboard-task     # Phase 3: Complete your first task and open a PR
-/onboard reset    # Clear progress and start over
-/onboard status   # Just show progress without routing
+Clone https://github.com/ChintanTurakhia/onboarding-skills.git and run
+./install.sh to set up the onboarding skills. Then start the onboarding
+by running the steps from /onboard.
 ```
 
-## Supported MCPs
+Claude will clone this repo, install the onboarding skills, and start guiding you through setup. Just follow along and answer its questions.
 
-The MCP catalog (`skills/onboard-mcps/mcp-catalog.md`) includes:
+## What happens next
 
-| Category | Tools |
-|----------|-------|
-| Project Management | Linear, Jira, Asana, GitHub Issues |
-| Knowledge Base | Confluence, Notion |
-| CRM | Salesforce, HubSpot |
-| Design | Excalidraw |
+Claude will walk you through 3 phases:
 
-To add a new MCP, edit `skills/onboard-mcps/mcp-catalog.md` with the install command, required credentials, and verification steps.
+**Phase 1: Environment setup** -- Installs developer tools (git, GitHub CLI, etc.), configures your git identity, and sets up GitHub authentication.
 
-## How It Works
+**Phase 2: Tool connections** -- Asks what tools you use (Linear, Jira, Confluence, Notion, etc.) and connects them to Claude so it can read your tickets, docs, and more.
 
-- Each phase is a standalone Claude Code skill (slash command)
-- Progress is tracked in `~/.onboarding-state.md` (created on first run)
-- Every phase is **idempotent** -- safe to re-run without breaking anything
-- The flow is **role-aware** -- developers and PMs get different tool suggestions and task types
-- Credentials are passed via `claude mcp add -e` and never stored in plain text
+**Phase 3: Your first task** -- Helps you clone a repo, pick a real ticket, plan the work, and open a draft pull request.
 
-## Customizing for Your Team
+You can pause and resume at any time. Run `/onboard` to see where you left off.
 
-Fork this repo and customize:
+---
 
-1. **Default tools** -- Edit `skills/onboard-env/SKILL.md` to add/remove tools for your stack
-2. **MCP catalog** -- Edit `skills/onboard-mcps/mcp-catalog.md` to add your company's MCPs
-3. **Default repo** -- Edit `skills/onboard-task/SKILL.md` to suggest your team's repo
-4. **Add a CLAUDE.md** to your repos with project-specific instructions that Phase 3 will pick up automatically
+## For team leads: customizing this for your team
 
-## Contributing
+Fork this repo and edit the skills to fit your stack:
 
-1. Fork this repo
-2. Add your changes
-3. Test by running `./install.sh` and going through the onboarding flow
-4. Open a PR
+- `skills/onboard-env/SKILL.md` -- Add or remove tools for your stack
+- `skills/onboard-mcps/mcp-catalog.md` -- Add your company's MCP servers and credentials
+- `skills/onboard-task/SKILL.md` -- Set a default repo or ticket source for new hires
+
+Then update the clone URL in the prompt above to point to your fork.
 
 ## License
 
